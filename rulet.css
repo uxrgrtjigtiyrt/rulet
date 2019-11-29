@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    font-family: sans-serif;
+    height: 100%;
+    background: dodgerblue;
+  }
+  .container {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .roullete {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid black;
+    position: relative;
+  }
+  .roullete.loop {
+    animation: rotation 0.15s linear forwards infinite;
+  }
+  .result{
+    position: absolute;
+    top:10px;
+  }
+.choose{
+  z-index: 100000;
+  position: absolute;
+  width: 0px;height: 0px;
+  left:797px;
+  top:230px;
+  border-top:50px solid black;
+  border-bottom:50px solid none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid  transparent;
+}
+
+
+  .line {
+    width: 50%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    margin-right:150px;
+    top: 150px;
+    left: 0;
+    transform-origin: 100% 50%;
+    transform:rotate(90deg);
+  }
+  .content {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    height: 280px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .trigger {
+    margin-left: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 3px solid black;
+    cursor: pointer;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(720deg);
+    }
+  }
+
+  @keyframes stop {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
